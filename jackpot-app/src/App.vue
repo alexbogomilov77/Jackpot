@@ -1,17 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <Daily/>
+      <Hourly/>
+      <Super/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import json from '@/data/mockData.json';
+import Hourly from '@/components/Hourly.vue'
+import Daily from '@/components/Daily.vue'
+import Super from '@/components/Super.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Hourly,
+    Daily,
+    Super
+  },
+  mounted() {
+    console.log(json)
   }
 }
 </script>

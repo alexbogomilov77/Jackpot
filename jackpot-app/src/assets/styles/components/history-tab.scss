@@ -1,0 +1,35 @@
+.history-header > div {
+  background-color: $blue-alive;
+    span {
+      color: $gray;
+      font-size: 16px;
+  }
+}
+
+
+.dates {
+  span {
+    display: block;
+  }
+}
+
+.history-content {
+  position: relative;
+}
+.date-of-change {
+  position: absolute;
+  left: 17%;
+}
+// .history-content {
+//   .eachDateRow {
+//     display: flex;
+//     margin: 0 auto;
+//     width: 68%;
+//   }
+//   .dates, .date {
+//     span {
+//       display: block;
+//       font-size: 16px;
+//     }
+//   }
+// }

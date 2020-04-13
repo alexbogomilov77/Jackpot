@@ -1,0 +1,119 @@
+.filters-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  margin-bottom: 32px;
+
+  .filter-selectors {
+    display: flex;
+    width: 70%;
+  }
+}
+
+.dropdown {
+  // display: inline-block !important;
+  // width: 15% !important;
+  width: 100% !important;
+  font-size: 14px;
+  margin-right: 10px;
+  .multiselect__tags {
+    height: 25px;
+    padding: 0px 40px 0 8px;
+    // line-height: 30px;
+  }
+  .multiselect__input {
+    font-family: "Muli-Regular" !important;
+  }
+  .multiselect__single, .multiselect__input {
+    // line-height: 25px;
+    margin: 3% 0;
+  }
+  .multiselect__placeholder {
+    color: $gray;
+    padding: 0 0 0 5px;
+    margin: 3% 0;
+    line-height: 20px;
+  }
+  span {
+    font-size: 16px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .multiselect__tags {
+    border-radius: 5px;
+    border: 1px solid $gray;
+  }
+  // .multiselect__option {
+  //   color: $gray;
+  //   font-size: 14px;
+  //   min-height: 0px;
+  //   padding: 5px 10px;
+  // }
+  // .multiselect__single {
+  //   color: $gray;
+  //   font-size: 14px;
+  // }
+  .multiselect__option--highlight {
+    color: $white;
+    background: $blue-alive;
+  }
+  .multiselect__option--selected.multiselect__option--highlight {
+    font-weight: normal;
+    background: $blue-alive;
+  }
+}
+
+.multiselect__tags {
+  border: 1px solid #0D2749 !important;
+  border-radius: 4px !important;
+}
+
+.multiselect__tags-wrap {
+  display: none !important;
+}
+
+.multiselect__option--selected {
+  background: #E1F7FF !important;
+  font-weight: normal !important;
+}
+
+.multiselect__option--selected::before {
+  font-family: "staffing-tool-icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 16px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\e900";
+  color: #10c030;
+  position: relative;
+  float: right;
+}
+
+.multiselect__option--selected:hover {
+  background: $white !important;
+
+  &::before {
+    content: "";
+  }
+}
+
+.multiselect__option::after {
+  display: none !important;
+}
+
+.multiselect--disabled .multiselect__select {
+  background: transparent !important;
+}
+
+// .client-filter, .project-filter, .month-filter {
+//   display: inline-block !important;
+//   width: 20% !important;
+// }

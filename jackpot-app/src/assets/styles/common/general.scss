@@ -1,0 +1,18 @@
+#app {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.container {
+  text-align: center;
+  background-image: url("../../assets/images/background.png");
+  max-width: 300px;
+  min-width: 150px;
+  height: 100vh;
+  min-height: 320px;
+}
+
+.box {
+  border: 2px solid yellowgreen;
+}

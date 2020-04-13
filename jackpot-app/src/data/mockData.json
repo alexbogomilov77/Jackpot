@@ -1,0 +1,22 @@
+[
+  {
+    "potType": "big",
+    "sum": "1167.98",
+    "currency": "$",
+    "must_drop_in": "05:53:14",
+    "imageType": "daily_drop"
+  },
+  {
+    "potType": "medium",
+    "sum": "337413.68",
+    "currency": "$",
+    "imageType": "super_drop"
+  },
+  {
+    "potType": "medium",
+    "sum": "129.78",
+    "currency": "$",
+    "must_drop_in": "01:53:14",
+    "imageType": "hourly_drop"
+  }
+]

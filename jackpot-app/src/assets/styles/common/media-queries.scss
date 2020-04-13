@@ -1,0 +1,17 @@
+/* Media queries */
+
+@mixin bp($point) {
+  @if $point == large {
+    @media (min-width: 1681px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
+}
