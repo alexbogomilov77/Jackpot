@@ -1,28 +1,42 @@
 <template>
   <div id="app">
     <div class="container">
-      <Daily/>
-      <Hourly/>
-      <Super/>
+      <div v-for="(pot) in pots" :key="pot.id">
+        <!-- <Daily
+          v-if="pot.potType == 'big'"
+          :type="pot.type"
+          :sum="pot.sum"
+          :currency="pot.currency"
+          :drop="pot.drop"
+          :image="pot.image"
+        /> -->
+        <Super
+          :type="pot.potType"
+          :sum="pot.sum"
+          :currency="pot.currency"
+          :drop="pot.drop"
+          :image="pot.imageType"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import json from '@/data/mockData.json';
-import Hourly from '@/components/Hourly.vue'
-import Daily from '@/components/Daily.vue'
+// import Daily from '@/components/Daily.vue'
 import Super from '@/components/Super.vue'
 
 export default {
   name: 'App',
   components: {
-    Hourly,
-    Daily,
+    // Daily,
     Super
   },
-  mounted() {
-    console.log(json)
+  data() {
+    return {
+      pots: json
+    }
   }
 }
 </script>
