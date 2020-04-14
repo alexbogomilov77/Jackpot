@@ -1,21 +1,20 @@
 <template>
-  <div class="box large">
+  <div class="pot-wrapper small">
     <img class="img" :src="imgPath">
-    <div class="jackpot">
-      <img src="@/assets/images/border.png">
+    <div class="prize">
       <p class="sum">{{currency}}{{ sum }}</p>
+      <span class="drop" v-if="drop">
+        Must drop in
+        <i class="icon">&#128338;</i>
+        {{ drop }}
+      </span>
     </div>
-    <span class="drop">
-      Must drop in
-      <i class="icon">&#128338;</i>
-      {{ drop }}
-    </span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Daily',
+  name: 'Pot',
   props: ["sum", "currency", "drop", "image"],
   computed: {
     imgPath: function () {

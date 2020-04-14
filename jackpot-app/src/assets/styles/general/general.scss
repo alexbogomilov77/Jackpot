@@ -1,21 +1,28 @@
 #app {
+  margin: 0px;
   display: flex;
   justify-content: center;
-  margin: 0px;
+  text-align: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+.warning {
+  display: none;
 }
 
 .container {
-  text-align: center;
-  background-image: url("../../assets/images/background.png");
   max-width: 300px;
   min-width: 150px;
   height: 100vh;
   min-height: 320px;
   padding: 10px;
+  text-align: center;
+  background-image: url("../../assets/images/background.png");
   overflow-y: scroll;
 }
 
-.box {
+.pot-wrapper {
+  //common styles
   box-shadow: inset 0px 0px 20px #465ba7c7;
   .sum {
     font-family: MinionStd-Black;
@@ -26,27 +33,27 @@
   .icon {
     font-style: normal;
   }
-  .jackpot {
-    position: relative;
-    margin-bottom: 15px;
-    .sum {
-      top: 7%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      position: absolute;
-      font-size: clamp(20px, 14vw, 45px);
-    }
-  }
+  //large pot
   &.large {
-    // position: relative;
-    // margin-top: -25px;
     padding-bottom: 25px;
+    .prize {
+      position: relative;
+      margin-bottom: 15px;
+      .sum {
+        top: 7%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        font-size: clamp(20px, 14vw, 45px);
+      }
+    }
     .drop {
+      color: #ffffff;
       font-size: clamp(5px, 5vw, 12px);
-      color: white;
     }
   }
+  //small pot
   &.small {
     display: flex;
     flex-wrap: wrap;
@@ -61,23 +68,15 @@
       max-width: 35%;
       margin-right: 25px;
     }
-    .info {
+    .prize {
       text-align: left;
       .sum {
         font-size: clamp(10px, 7vw, 27px);
       }
       .drop {
+        color: #ffffff;
         font-size: clamp(4px, 3vw, 11px);
-        color: white;
       }
     }
   }
 }
-
-
-
-
-    // background-image: url("../../assets/images/border.png");
-    // background-repeat:no-repeat;
-    // background-size:contain;
-    // background-position:center;

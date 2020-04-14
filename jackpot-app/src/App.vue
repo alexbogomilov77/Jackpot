@@ -1,15 +1,18 @@
 <template>
   <div id="app">
+    <div class="warning">
+      <h3>Screen size should be at least 150px!</h3>
+    </div>
     <div class="container">
       <div v-for="(pot) in pots" :key="pot.id">
-        <Daily
+        <MainPot
           v-if="pot.potType == 'big'"
           :sum="pot.sum"
           :currency="pot.currency"
           :drop="pot.must_drop_in"
           :image="pot.imageType"
         />
-        <Super
+        <Pot
           v-else
           :sum="pot.sum"
           :currency="pot.currency"
@@ -23,14 +26,14 @@
 
 <script>
 import json from '@/data/mockData.json';
-import Daily from '@/components/Daily.vue'
-import Super from '@/components/Super.vue'
+import MainPot from '@/components/MainPot.vue'
+import Pot from '@/components/Pot.vue'
 
 export default {
   name: 'App',
   components: {
-    Daily,
-    Super
+    MainPot,
+    Pot
   },
   data() {
     return {
@@ -40,13 +43,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
