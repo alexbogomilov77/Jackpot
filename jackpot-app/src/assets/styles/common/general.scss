@@ -51,7 +51,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px 0;
+    margin: 15px 0;
     padding: 10px 5px;
     background-image: url("../../assets/images/stars.png");
     background-repeat: no-repeat;
@@ -63,10 +63,10 @@
     .info {
       text-align: left;
       .sum {
-        font-size: 25px;
+        font-size: 27px;
       }
       .drop {
-        font-size: 12px;
+        font-size: 10px;
         color: white;
       }
     }
