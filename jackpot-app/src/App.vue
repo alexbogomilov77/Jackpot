@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="warning">
-      <h3>Screen size should be at least 150px!</h3>
+      <h3>Screen width should be at least 150px!</h3>
     </div>
     <div class="container">
       <div v-for="(pot) in pots" :key="pot.id">
