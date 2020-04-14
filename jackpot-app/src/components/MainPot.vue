@@ -19,7 +19,7 @@ export default {
   props: ["sum", "currency", "drop", "image"],
   computed: {
     imgPath: function () {
-      return require('@/assets/images/' + this.image + ".png")
+      return require(`@/assets/images/${this.image}.png`)
     }
   }
 }
