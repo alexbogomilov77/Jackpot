@@ -2,19 +2,18 @@
   <div id="app">
     <div class="container">
       <div v-for="(pot) in pots" :key="pot.id">
-        <!-- <Daily
+        <Daily
           v-if="pot.potType == 'big'"
-          :type="pot.type"
           :sum="pot.sum"
           :currency="pot.currency"
-          :drop="pot.drop"
-          :image="pot.image"
-        /> -->
+          :drop="pot.must_drop_in"
+          :image="pot.imageType"
+        />
         <Super
-          :type="pot.potType"
+          v-else
           :sum="pot.sum"
           :currency="pot.currency"
-          :drop="pot.drop"
+          :drop="pot.must_drop_in"
           :image="pot.imageType"
         />
       </div>
@@ -24,13 +23,13 @@
 
 <script>
 import json from '@/data/mockData.json';
-// import Daily from '@/components/Daily.vue'
+import Daily from '@/components/Daily.vue'
 import Super from '@/components/Super.vue'
 
 export default {
   name: 'App',
   components: {
-    // Daily,
+    Daily,
     Super
   },
   data() {

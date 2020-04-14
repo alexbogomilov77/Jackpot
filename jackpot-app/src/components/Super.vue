@@ -1,21 +1,23 @@
 <template>
-  <div class="box">
-    <!-- <img alt="logo" :src="`../assets/images/${image}.png`"> -->
-    <!-- <img alt="Vue logo" src="../assets/images/super.png"> -->
-    <img alt="Vue logo" :src="imgPath"/>
-    <p>{{ type }}</p>
-    <p>{{ sum }}</p>
+  <div class="box small">
+    <img :src="imgPath" alt="logo">
+    <div class="info">
+      <p>{{currency}} {{ sum }}</p>
+        <span  v-if="drop">
+          <i style="font-style:normal">&#128338;</i>
+          Must drop in {{ drop }}
+        </span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Super',
-  props: ["type", "sum", "currency", "drop", "image"],
+  props: ["sum", "currency", "drop", "image"],
   computed: {
     imgPath: function () {
-      return require('../assets/' + this.image + '.png')
-      // return require("@/assets/images/" + this.image);
+      return require('@/assets/images/' + this.image + ".png")
     }
   }
 }

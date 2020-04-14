@@ -1,14 +1,22 @@
 <template>
-  <div class="box">
-    <img alt="Vue logo" src="../assets/images/daily.png">
+  <div class="box mainBox">
+    <img alt="Vue logo" :src="imgPath">
+    <div class="daily">
+      <p>{{currency}} {{ sum }}</p>
+    </div>
+    <!-- <img src="../assets/images/border.png" alt="border"> -->
+    <p>Must drop in {{ drop }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Daily',
-  props: {
-    msg: String
+  props: ["sum", "currency", "drop", "image"],
+  computed: {
+    imgPath: function () {
+      return require('@/assets/images/' + this.image + ".png")
+    }
   }
 }
 </script>

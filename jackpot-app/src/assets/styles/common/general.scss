@@ -11,8 +11,52 @@
   min-width: 150px;
   height: 100vh;
   min-height: 320px;
+  padding: 10px;
 }
+
+// .mainBox {
+//   background-image: url("../../assets/images/daily_drop.png");
+//   background-size: cover;
+//   height: 300px;
+// }
 
 .box {
   border: 2px solid yellowgreen;
+  p {
+    font-family: MinionStd-Black;
+    background: -webkit-linear-gradient(#E4E780, #cc9022);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &.small {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
+
+// .drop {
+//   content: '🕐';
+// }
+
+.daily {
+  background-image: url("../../assets/images/border.png");
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  padding: 5px;
+  p {
+    // padding: 25px;
+    font-size: 46px;
+  }
+}
+
+// @media only screen and (max-width: 350px) {
+
+//   .daily {
+//     p {
+//       font-size: 26px;
+//     }
+//   }
+
+// }
