@@ -1,12 +1,15 @@
 <template>
-  <div class="box mainBox">
-    <img alt="Vue logo" :src="imgPath">
-    <div class="daily">
+  <div class="box large">
+    <img class="img" :src="imgPath">
+    <div class="jackpot">
       <img src="@/assets/images/border.png">
-      <p>{{currency}} {{ sum }}</p>
+      <p class="sum">{{currency}}{{ sum }}</p>
     </div>
-    <!-- <img src="../assets/images/border.png" alt="border"> -->
-    <p>Must drop in {{ drop }}</p>
+    <span class="drop">
+      Must drop in
+      <i class="icon">&#128338;</i>
+      {{ drop }}
+    </span>
   </div>
 </template>
 

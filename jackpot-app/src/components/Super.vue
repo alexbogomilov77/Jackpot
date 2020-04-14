@@ -1,11 +1,12 @@
 <template>
   <div class="box small">
-    <img :src="imgPath" alt="logo">
+    <img class="img" :src="imgPath" alt="logo">
     <div class="info">
-      <p>{{currency}} {{ sum }}</p>
-        <span  v-if="drop">
-          <i style="font-style:normal">&#128338;</i>
-          Must drop in {{ drop }}
+      <p class="sum">{{currency}}{{ sum }}</p>
+        <span class="drop" v-if="drop">
+          Must drop in
+          <i class="icon">&#128338;</i>
+          {{ drop }}
         </span>
     </div>
   </div>

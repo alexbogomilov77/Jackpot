@@ -14,54 +14,69 @@
   padding: 10px;
 }
 
-// .mainBox {
-//   background-image: url("../../assets/images/daily_drop.png");
-//   background-size: cover;
-//   height: 300px;
-// }
-
 .box {
-  border: 2px solid yellowgreen;
-  p {
+  box-shadow: inset 0px 0px 20px #465ba7c7;
+  .sum {
     font-family: MinionStd-Black;
     background: -webkit-linear-gradient(#E4E780, #cc9022);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .icon {
+    font-style: normal;
+  }
+  .jackpot {
+    position: relative;
+    margin-bottom: 15px;
+    .sum {
+      top: 7%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      font-size: clamp(20px, 14vw, 45px);
+    }
+  }
+  &.large {
+    // position: relative;
+    // margin-top: -25px;
+    padding-bottom: 25px;
+    .drop {
+      font-size: 12px;
+      color: white;
+    }
+  }
   &.small {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    img {
-      max-width: 50%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 5px;
+    background-image: url("../../assets/images/stars.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    .img {
+      max-width: 35%;
+      margin-right: 25px;
+    }
+    .info {
+      text-align: left;
+      .sum {
+        font-size: 25px;
+      }
+      .drop {
+        font-size: 12px;
+        color: white;
+      }
     }
   }
 }
 
-.daily {
-  // background-image: url("../../assets/images/border.png");
-  // background-repeat:no-repeat;
-  // background-size:contain;
-  // background-position:center;
-  position: relative;
-  padding: 5px;
-  p {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-    font-size: clamp(24px, 4vw, 46px);
-  }
-}
 
-// @media only screen and (max-width: 350px) {
 
-//   .daily {
-//     p {
-//       font-size: 26px;
-//     }
-//   }
 
-// }
+    // background-image: url("../../assets/images/border.png");
+    // background-repeat:no-repeat;
+    // background-size:contain;
+    // background-position:center;
