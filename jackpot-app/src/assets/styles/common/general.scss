@@ -32,22 +32,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    img {
+      max-width: 50%;
+    }
   }
 }
 
-// .drop {
-//   content: '🕐';
-// }
-
 .daily {
-  background-image: url("../../assets/images/border.png");
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;
+  // background-image: url("../../assets/images/border.png");
+  // background-repeat:no-repeat;
+  // background-size:contain;
+  // background-position:center;
+  position: relative;
   padding: 5px;
   p {
-    // padding: 25px;
-    font-size: 46px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    font-size: clamp(24px, 4vw, 46px);
   }
 }
 
