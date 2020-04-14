@@ -42,7 +42,7 @@
     // margin-top: -25px;
     padding-bottom: 25px;
     .drop {
-      font-size: 12px;
+      font-size: clamp(5px, 5vw, 12px);
       color: white;
     }
   }
@@ -63,10 +63,10 @@
     .info {
       text-align: left;
       .sum {
-        font-size: 27px;
+        font-size: clamp(12px, 8vw, 27px);
       }
       .drop {
-        font-size: 10px;
+        font-size: clamp(5px, 3vw, 11px);
         color: white;
       }
     }
